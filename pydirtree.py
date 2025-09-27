@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import argparse, os, sys, json, fnmatch
+import argparse, os, sys, json, fnmatch, datetime
 from pathlib import Path
 
 DEFAULT_IGNORES = {".git", "node_modules", "__pycache__", ".venv"}
@@ -7,7 +7,7 @@ DEFAULT_IGNORES = {".git", "node_modules", "__pycache__", ".venv"}
 def match_ignored(name, patterns):
     return any(fnmatch.fnmatch(name, p) for p in patterns)
 
-def iter_entries(base: Path, follow_symlinks: bool):
+def iter_entries(base: Path):
     try:
         with os.scandir(base) as it:
             for e in sorted(it, key=lambda x: (not x.is_dir(), x.name.lower())):
@@ -15,29 +15,57 @@ def iter_entries(base: Path, follow_symlinks: bool):
     except PermissionError:
         return
 
-def build_tree(path: Path, max_depth: int, show_hidden: bool, ignore, only_dirs: bool, follow_symlinks: bool, with_size: bool):
+def fmt_bytes(n: int, unit: str = "b") -> str:
+    unit = unit.lower()
+    factor = {
+        "b": 1,
+        "kb": 1024,
+        "mb": 1024**2,
+        "gb": 1024**3,
+        "tb": 1024**4,
+    }.get(unit, 1)
+    value = n / factor
+    if factor == 1:
+        return f"{int(value):,}".replace(",", ".") + " B"
+    else:
+        return f"{value:,.2f}".replace(",", ".") + f" {unit.upper()}"
+
+def build_tree(path: Path, max_depth: int, show_hidden: bool, ignore, only_dirs: bool, follow_symlinks: bool,
+               with_size: bool, with_date: bool, exclude_files):
     def _walk(dirpath: Path, depth: int):
         if max_depth is not None and depth > max_depth:
             return
         entries = []
-        for e in iter_entries(dirpath, follow_symlinks):
+        for e in iter_entries(dirpath):
             name = e.name
             if not show_hidden and name.startswith("."):
                 continue
             if match_ignored(name, ignore):
                 continue
             is_dir = e.is_dir()
+            if not is_dir and exclude_files and match_ignored(name, exclude_files):
+                continue
             if only_dirs and not is_dir:
                 continue
+
             size = None
-            if with_size and not is_dir:
+            created = None
+            if not is_dir:
                 try:
-                    size = e.stat(follow_symlinks=False).st_size
+                    st = e.stat(follow_symlinks=False)
+                    if with_size:
+                        size = st.st_size
+                    if with_date:
+                        created = datetime.datetime.fromtimestamp(st.st_ctime).strftime("%Y/%m/%d %H:%M:%S")
                 except OSError:
                     size = None
+                    created = None
+
             node = {"name": name, "type": "dir" if is_dir else "file"}
             if size is not None:
                 node["size"] = size
+            if created:
+                node["created"] = created
             if is_dir and (max_depth is None or depth < max_depth):
                 node["children"] = list(_walk(Path(e.path), depth + 1))
             entries.append(node)
@@ -53,9 +81,20 @@ def render_text(node, prefix=""):
             branch = "└── " if last else "├── "
             cont = "    " if last else "│   "
             label = ch["name"] + ("/" if ch.get("type") == "dir" else "")
-            if "size" in ch and ch.get("type") == "file" and ch["size"] is not None:
-                label += f" ({ch['size']} B)"
             lines.append(pref + branch + label)
+
+            # Riga info sotto ai file solo se ci sono size/date
+            if ch.get("type") == "file" and (ch.get("size") is not None or ch.get("created")):
+                parts = []
+                if ch.get("size") is not None:
+                    parts.append(fmt_bytes(ch["size"], size_unit))
+                if ch.get("created"):
+                    parts.append(f"Created at: {ch['created']}")
+                if parts:  # parentesi solo se esistono parti
+                    lines.append(pref + cont + "(" + " - ".join(parts) + ")")
+                    if space_between:
+                        lines.append(pref + cont)
+
             if ch.get("children"):
                 _render(ch["children"], pref + cont)
     if node.get("children"):
@@ -78,9 +117,18 @@ def main():
     ap.add_argument("--format", choices=["text", "md", "json"], default="text", help="Formato output")
     ap.add_argument("-o", "--output", help="Scrivi su file invece che su stdout")
     ap.add_argument("--follow-symlinks", action="store_true", help="Segui i symlink a directory")
-    ap.add_argument("--size", action="store_true", help="Mostra la dimensione dei file in byte")
+    ap.add_argument("--size", action="store_true", help="Mostra la dimensione dei file")
+    ap.add_argument("--date", action="store_true", help="Mostra la data di creazione dei file")
     ap.add_argument("--no-default-ignores", action="store_true", help="Disabilita gli ignore di default")
+    ap.add_argument("--exclude-files", nargs="*", default=[], help="Escludi file che combaciano con questi pattern (glob). Es: *.mp4 *.tmp")
+    ap.add_argument("--size-unit", choices=["b","kb","mb","gb","tb"], default="b", help="Unità di misura per le dimensioni (default: B)")
+    ap.add_argument("--space-between-lines", action="store_true", help="Aggiungi una riga vuota tra i file per maggiore leggibilità")
+
     args = ap.parse_args()
+
+    global size_unit, space_between
+    size_unit = args.size_unit
+    space_between = args.space_between_lines
 
     p = Path(args.path).resolve()
     if not p.exists():
@@ -90,7 +138,10 @@ def main():
     if not args.no_default_ignores:
         ignore |= DEFAULT_IGNORES
 
-    tree = build_tree(p, args.max_depth, args.hidden, ignore, args.only_dirs, args.follow_symlinks, args.size)
+    tree = build_tree(
+        p, args.max_depth, args.hidden, ignore, args.only_dirs,
+        args.follow_symlinks, args.size, args.date, args.exclude_files
+    )
 
     if args.format == "json":
         out = json.dumps(tree, ensure_ascii=False, indent=2)
