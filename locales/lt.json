@@ -1,0 +1,21 @@
+{
+  "title": "pydirtree – GUI",
+  "path": "Kelias:",
+  "browse": "Naršyti…",
+  "depth": "Gylis (-d):",
+  "format": "Formatas:",
+  "size_unit": "Dydžio vienetas:",
+  "ignore": "--ignore:",
+  "exclude": "--exclude-files:",
+  "hidden": "--hidden",
+  "only_dirs": "--only-dirs",
+  "follow": "--follow-symlinks",
+  "size": "--size",
+  "date": "--date",
+  "space": "--space-between-lines",
+  "generate": "Generuoti",
+  "save": "Išsaugoti išvestį…",
+  "no_output": "Nėra išvesties, kurią būtų galima išsaugoti.",
+  "err_path": "Kelias nerastas:",
+  "err_generic": "Klaida"
+}

@@ -1,0 +1,21 @@
+{
+  "title": "pydirtree – GUI",
+  "path": "Ścieżka:",
+  "browse": "Przeglądaj…",
+  "depth": "Głębokość (-d):",
+  "format": "Format:",
+  "size_unit": "Jednostka rozmiaru:",
+  "ignore": "--ignore:",
+  "exclude": "--exclude-files:",
+  "hidden": "--hidden",
+  "only_dirs": "--only-dirs",
+  "follow": "--follow-symlinks",
+  "size": "--size",
+  "date": "--date",
+  "space": "--space-between-lines",
+  "generate": "Generuj",
+  "save": "Zapisz wynik…",
+  "no_output": "Brak danych do zapisania.",
+  "err_path": "Nie znaleziono ścieżki:",
+  "err_generic": "Błąd"
+}

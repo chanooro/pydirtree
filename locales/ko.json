@@ -1,0 +1,21 @@
+{
+  "title": "pydirtree – GUI",
+  "path": "경로:",
+  "browse": "찾아보기…",
+  "depth": "깊이 (-d):",
+  "format": "형식:",
+  "size_unit": "크기 단위:",
+  "ignore": "--ignore:",
+  "exclude": "--exclude-files:",
+  "hidden": "--hidden",
+  "only_dirs": "--only-dirs",
+  "follow": "--follow-symlinks",
+  "size": "--size",
+  "date": "--date",
+  "space": "--space-between-lines",
+  "generate": "생성",
+  "save": "출력 저장…",
+  "no_output": "저장할 출력이 없습니다.",
+  "err_path": "경로를 찾을 수 없습니다:",
+  "err_generic": "오류"
+}

@@ -1,0 +1,21 @@
+{
+  "title": "pydirtree – GUI",
+  "path": "Sökväg:",
+  "browse": "Bläddra…",
+  "depth": "Djup (-d):",
+  "format": "Format:",
+  "size_unit": "Storhetsenhet:",
+  "ignore": "--ignore:",
+  "exclude": "--exclude-files:",
+  "hidden": "--hidden",
+  "only_dirs": "--only-dirs",
+  "follow": "--follow-symlinks",
+  "size": "--size",
+  "date": "--date",
+  "space": "--space-between-lines",
+  "generate": "Generera",
+  "save": "Spara output…",
+  "no_output": "Ingen output att spara.",
+  "err_path": "Sökväg hittades inte:",
+  "err_generic": "Fel"
+}

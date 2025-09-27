@@ -1,0 +1,21 @@
+{
+  "title": "pydirtree – GUI",
+  "path": "Ceļš:",
+  "browse": "Pārlūkot…",
+  "depth": "Dziļums (-d):",
+  "format": "Formāts:",
+  "size_unit": "Izmēra vienība:",
+  "ignore": "--ignore:",
+  "exclude": "--exclude-files:",
+  "hidden": "--hidden",
+  "only_dirs": "--only-dirs",
+  "follow": "--follow-symlinks",
+  "size": "--size",
+  "date": "--date",
+  "space": "--space-between-lines",
+  "generate": "Ģenerēt",
+  "save": "Saglabāt izvadi…",
+  "no_output": "Nav izvades, ko saglabāt.",
+  "err_path": "Ceļš nav atrasts:",
+  "err_generic": "Kļūda"
+}

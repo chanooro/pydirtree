@@ -1,0 +1,21 @@
+{
+  "title": "pydirtree – GUI",
+  "path": "パス:",
+  "browse": "参照…",
+  "depth": "深さ (-d):",
+  "format": "フォーマット:",
+  "size_unit": "サイズ単位:",
+  "ignore": "--ignore:",
+  "exclude": "--exclude-files:",
+  "hidden": "--hidden",
+  "only_dirs": "--only-dirs",
+  "follow": "--follow-symlinks",
+  "size": "--size",
+  "date": "--date",
+  "space": "--space-between-lines",
+  "generate": "生成",
+  "save": "出力を保存…",
+  "no_output": "保存する出力はありません。",
+  "err_path": "パスが見つかりません:",
+  "err_generic": "エラー"
+}

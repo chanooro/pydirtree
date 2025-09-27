@@ -1,0 +1,21 @@
+{
+  "title": "pydirtree – GUI",
+  "path": "Yol:",
+  "browse": "Gözat…",
+  "depth": "Derinlik (-d):",
+  "format": "Biçim:",
+  "size_unit": "Boyut birimi:",
+  "ignore": "--ignore:",
+  "exclude": "--exclude-files:",
+  "hidden": "--hidden",
+  "only_dirs": "--only-dirs",
+  "follow": "--follow-symlinks",
+  "size": "--size",
+  "date": "--date",
+  "space": "--space-between-lines",
+  "generate": "Oluştur",
+  "save": "Çıktıyı kaydet…",
+  "no_output": "Kaydedilecek çıktı yok.",
+  "err_path": "Yol bulunamadı:",
+  "err_generic": "Hata"
+}

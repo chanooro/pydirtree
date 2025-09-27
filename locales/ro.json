@@ -1,0 +1,21 @@
+{
+  "title": "pydirtree – GUI",
+  "path": "Cale:",
+  "browse": "Răsfoiește…",
+  "depth": "Adâncime (-d):",
+  "format": "Format:",
+  "size_unit": "Unitate de măsură:",
+  "ignore": "--ignore:",
+  "exclude": "--exclude-files:",
+  "hidden": "--hidden",
+  "only_dirs": "--only-dirs",
+  "follow": "--follow-symlinks",
+  "size": "--size",
+  "date": "--date",
+  "space": "--space-between-lines",
+  "generate": "Generează",
+  "save": "Salvează ieșirea…",
+  "no_output": "Nu există ieșire de salvat.",
+  "err_path": "Calea nu a fost găsită:",
+  "err_generic": "Eroare"
+}

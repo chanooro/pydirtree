@@ -1,0 +1,21 @@
+{
+  "title": "pydirtree – GUI",
+  "path": "Cesta:",
+  "browse": "Prehľadávať…",
+  "depth": "Hĺbka (-d):",
+  "format": "Formát:",
+  "size_unit": "Jednotka veľkosti:",
+  "ignore": "--ignore:",
+  "exclude": "--exclude-files:",
+  "hidden": "--hidden",
+  "only_dirs": "--only-dirs",
+  "follow": "--follow-symlinks",
+  "size": "--size",
+  "date": "--date",
+  "space": "--space-between-lines",
+  "generate": "Generovať",
+  "save": "Uložiť výstup…",
+  "no_output": "Žiadny výstup na uloženie.",
+  "err_path": "Cesta nebola nájdená:",
+  "err_generic": "Chyba"
+}

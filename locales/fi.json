@@ -1,0 +1,21 @@
+{
+  "title": "pydirtree – GUI",
+  "path": "Polku:",
+  "browse": "Selaa…",
+  "depth": "Syvyys (-d):",
+  "format": "Muoto:",
+  "size_unit": "Koon yksikkö:",
+  "ignore": "--ignore:",
+  "exclude": "--exclude-files:",
+  "hidden": "--hidden",
+  "only_dirs": "--only-dirs",
+  "follow": "--follow-symlinks",
+  "size": "--size",
+  "date": "--date",
+  "space": "--space-between-lines",
+  "generate": "Luo",
+  "save": "Tallenna tuloste…",
+  "no_output": "Ei tulostetta tallennettavaksi.",
+  "err_path": "Polkua ei löytynyt:",
+  "err_generic": "Virhe"
+}

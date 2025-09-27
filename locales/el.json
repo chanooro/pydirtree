@@ -1,0 +1,21 @@
+{
+  "title": "pydirtree – GUI",
+  "path": "Διαδρομή:",
+  "browse": "Αναζήτηση…",
+  "depth": "Βάθος (-d):",
+  "format": "Μορφή:",
+  "size_unit": "Μονάδα μεγέθους:",
+  "ignore": "--ignore:",
+  "exclude": "--exclude-files:",
+  "hidden": "--hidden",
+  "only_dirs": "--only-dirs",
+  "follow": "--follow-symlinks",
+  "size": "--size",
+  "date": "--date",
+  "space": "--space-between-lines",
+  "generate": "Δημιουργία",
+  "save": "Αποθήκευση εξόδου…",
+  "no_output": "Δεν υπάρχει έξοδος για αποθήκευση.",
+  "err_path": "Η διαδρομή δεν βρέθηκε:",
+  "err_generic": "Σφάλμα"
+}

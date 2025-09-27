@@ -1,0 +1,21 @@
+{
+  "title": "pydirtree – GUI",
+  "path": "Pot:",
+  "browse": "Prebrskaj…",
+  "depth": "Globina (-d):",
+  "format": "Format:",
+  "size_unit": "Enota velikosti:",
+  "ignore": "--ignore:",
+  "exclude": "--exclude-files:",
+  "hidden": "--hidden",
+  "only_dirs": "--only-dirs",
+  "follow": "--follow-symlinks",
+  "size": "--size",
+  "date": "--date",
+  "space": "--space-between-lines",
+  "generate": "Ustvari",
+  "save": "Shrani izhod…",
+  "no_output": "Ni izhoda za shranjevanje.",
+  "err_path": "Pot ni bila najdena:",
+  "err_generic": "Napaka"
+}

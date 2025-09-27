@@ -1,0 +1,21 @@
+{
+  "title": "pydirtree – GUI",
+  "path": "Pad:",
+  "browse": "Bladeren…",
+  "depth": "Diepte (-d):",
+  "format": "Formaat:",
+  "size_unit": "Grootte-eenheid:",
+  "ignore": "--ignore:",
+  "exclude": "--exclude-files:",
+  "hidden": "--hidden",
+  "only_dirs": "--only-dirs",
+  "follow": "--follow-symlinks",
+  "size": "--size",
+  "date": "--date",
+  "space": "--space-between-lines",
+  "generate": "Genereren",
+  "save": "Uitvoer opslaan…",
+  "no_output": "Geen uitvoer om op te slaan.",
+  "err_path": "Pad niet gevonden:",
+  "err_generic": "Fout"
+}

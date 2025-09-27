@@ -1,0 +1,21 @@
+{
+  "title": "pydirtree – GUI",
+  "path": "路径:",
+  "browse": "浏览…",
+  "depth": "深度 (-d):",
+  "format": "格式:",
+  "size_unit": "大小单位:",
+  "ignore": "--ignore:",
+  "exclude": "--exclude-files:",
+  "hidden": "--hidden",
+  "only_dirs": "--only-dirs",
+  "follow": "--follow-symlinks",
+  "size": "--size",
+  "date": "--date",
+  "space": "--space-between-lines",
+  "generate": "生成",
+  "save": "保存输出…",
+  "no_output": "没有可保存的输出。",
+  "err_path": "路径未找到:",
+  "err_generic": "错误"
+}

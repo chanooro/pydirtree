@@ -1,0 +1,21 @@
+{
+  "title": "pydirtree – GUI",
+  "path": "Sti:",
+  "browse": "Gennemse…",
+  "depth": "Dybde (-d):",
+  "format": "Format:",
+  "size_unit": "Størrelsesenhed:",
+  "ignore": "--ignore:",
+  "exclude": "--exclude-files:",
+  "hidden": "--hidden",
+  "only_dirs": "--only-dirs",
+  "follow": "--follow-symlinks",
+  "size": "--size",
+  "date": "--date",
+  "space": "--space-between-lines",
+  "generate": "Generer",
+  "save": "Gem output…",
+  "no_output": "Ingen output at gemme.",
+  "err_path": "Sti ikke fundet:",
+  "err_generic": "Fejl"
+}

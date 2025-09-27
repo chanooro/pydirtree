@@ -1,0 +1,21 @@
+{
+  "title": "pydirtree – GUI",
+  "path": "Conair:",
+  "browse": "Brabhsáil…",
+  "depth": "Doimhneacht (-d):",
+  "format": "Formáid:",
+  "size_unit": "Aonad méide:",
+  "ignore": "--ignore:",
+  "exclude": "--exclude-files:",
+  "hidden": "--hidden",
+  "only_dirs": "--only-dirs",
+  "follow": "--follow-symlinks",
+  "size": "--size",
+  "date": "--date",
+  "space": "--space-between-lines",
+  "generate": "Gin",
+  "save": "Sábháil aschur…",
+  "no_output": "Níl aon aschur le sábháil.",
+  "err_path": "Conair gan aimsiú:",
+  "err_generic": "Earráid"
+}
