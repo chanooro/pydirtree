@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pydirtree"
+version = "0.1.0"
+description = "Albero directory CLI in Python: output testo/Markdown/JSON, filtri e profondità."
+authors = [
+  { name="Andrea Coppetta", email="chanooro.dev@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+
+[project.scripts]
+pydirtree = "pydirtree:main"
