@@ -1,87 +1,87 @@
 # pydirtree
 
-🇮🇹 Leggi in Italiano | [🇬🇧 Read in English](README_en.md)
+[🇮🇹 Leggi in Italiano](README.md) | 🇬🇧 Read in English
 
-Albero directory CLI in Python: output testo/Markdown/JSON, filtri e profondità.
+Directory tree CLI in Python: text/Markdown/JSON output, filters and depth control.
 
-## Installazione
+## Installation
 ```bash
 pip install -e .
 ```
 
-### Uso base
+### Basic usage
 ```bash
-# Stampa l’albero completo della cartella corrente
+# Print the full directory tree of the current folder
 pydirtree
 ```
 
-## Uso
+## Usage
 ```bash
 # path
-## Percorso di partenza (default = cartella corrente).
+## Starting path (default = current directory).
 pydirtree ~/Documenti
 
 # -d / --max-depth
-## Limita la profondità dell’albero.
+## Limit the tree depth.
 pydirtree -d 2
 
 # --hidden
-## Mostra file e cartelle nascosti.
+## Show hidden files and folders.
 pydirtree --hidden
 
 # --ignore
-## Ignora file/cartelle che combaciano con uno o più pattern glob.
+## Ignore files/folders matching one or more glob patterns.
 pydirtree --ignore *.log build dist
 
 # --only-dirs
-## Mostra solo directory, escludendo i file.
+## Show only directories, exclude files.
 pydirtree --only-dirs
 
 # --format
-## Formato di output (text, md, json).
+## Output format (text, md, json).
 pydirtree --format json
 
 # -o / --output
-## Scrive l’output su file.
+## Write the output to a file.
 pydirtree -o alberotree.txt
 
 # --follow-symlinks
-## Segui i symlink a directory.
+## Follow symlinks to directories.
 pydirtree --follow-symlinks
 
 # --size
-## Mostra la dimensione dei file.
+## Show file sizes.
 pydirtree --size
 
 # --date
-## Mostra la data di creazione dei file.
+## Show file creation date.
 pydirtree --date
 
 # --no-default-ignores
-## Disabilita gli ignore predefiniti (.git, node_modules, __pycache__, .venv).
+## Disable default ignores (.git, node_modules, __pycache__, .venv).
 pydirtree --no-default-ignores
 
 # --exclude-files
-## Escludi file specifici con pattern glob.
+## Exclude specific files with glob patterns.
 pydirtree --exclude-files *.mp4 *.tmp
 
 # --size-unit
-## Unità di misura per le dimensioni (b, kb, mb, gb, tb). Default = b.
+## Unit for file sizes (b, kb, mb, gb, tb). Default = b.
 pydirtree --size --size-unit mb
 
 # --space-between-lines
-## Aggiunge una riga vuota dopo ogni file con informazioni, per maggiore leggibilità.
+## Add a blank line after each file with info, for better readability.
 pydirtree --size --date --space-between-lines
 ```
 
-#### Formati supportati
-- text: output stile tree
-- md: blocco Markdown
-- json: struttura JSON navigabile
+#### Supported formats
+- text: tree-style output
+- md: Markdown block
+- json: JSON navigable structure
 
 #### Esempio di output
 ```bash
-# Cartella di test con due file e una sottocartella:
+# Test folder with two files and a subfolder:
 Demo/
 ├── file1.txt
 │   (1.024 B - Created at: 2025/09/27 09:50:15)
@@ -93,11 +93,11 @@ Demo/
     └── file3.mp4
         (12.346.628 B - Created at: 2025/09/25 18:05:44)
 
-# Con --only-dirs
+# With --only-dirs
 Demo/
 └── Subdir/
 
-# Con --format json
+# With --format json
 {
   "name": "Demo",
   "type": "dir",
