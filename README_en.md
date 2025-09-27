@@ -79,7 +79,7 @@ pydirtree --size --date --space-between-lines
 - md: Markdown block
 - json: JSON navigable structure
 
-#### Esempio di output
+#### Output example
 ```bash
 # Test folder with two files and a subfolder:
 Demo/
@@ -110,4 +110,36 @@ Demo/
     }
   ]
 }
+```
+
+#### 🌐 Available languages
+```bash
+🇬🇧 English (en.json)
+🇮🇹 Italian (it.json)
+🇪🇸 Spanish (es.json)
+🇨🇳 Chinese (zh.json)
+🇷🇺 Russian (ru.json)
+🇵🇹 Portuguese (pt.json)
+🇯🇵 Japanese (ja.json)
+🇫🇷 French (fr.json)
+🇩🇪 German (de.json)
+🇳🇱 Dutch (nl.json)
+🇩🇰 Danish (da.json)
+🇸🇪 Swedish (sv.json)
+🇷🇴 Romanian (ro.json)
+🇨🇿 Czech (cs.json)
+🇭🇷 Croatian (hr.json)
+🇵🇱 Polish (pl.json)
+🇸🇰 Slovak (sk.json)
+🇸🇮 Slovenian (sl.json)
+🇱🇻 Latvian (lv.json)
+🇱🇹 Lithuanian (lt.json)
+🇮🇪 Irish (ga.json)
+🇬🇷 Greek (el.json)
+🇭🇺 Hungarian (hu.json)
+🇫🇮 Finnish (fi.json)
+🇹🇷 Turkish (tr.json)
+🇦🇱 Albanian (sq.json)
+🇷🇸 Serbian (sr.json)
+🇰🇷 Korean (ko.json)
 ```

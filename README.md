@@ -111,3 +111,35 @@ Demo/
   ]
 }
 ```
+
+#### 🌐 Lingue disponibili
+```bash
+🇬🇧 Inglese (en.json)
+🇮🇹 Italiano (it.json)
+🇪🇸 Spagnolo (es.json)
+🇨🇳 Cinese (zh.json)
+🇷🇺 Russo (ru.json)
+🇵🇹 Portoghese (pt.json)
+🇯🇵 Giapponese (ja.json)
+🇫🇷 Francese (fr.json)
+🇩🇪 Tedesco (de.json)
+🇳🇱 Olandese (nl.json)
+🇩🇰 Danese (da.json)
+🇸🇪 Svedese (sv.json)
+🇷🇴 Rumeno (ro.json)
+🇨🇿 Ceco (cs.json)
+🇭🇷 Croato (hr.json)
+🇵🇱 Polacco (pl.json)
+🇸🇰 Slovacco (sk.json)
+🇸🇮 Sloveno (sl.json)
+🇱🇻 Lettone (lv.json)
+🇱🇹 Lituano (lt.json)
+🇮🇪 Irlandese (ga.json)
+🇬🇷 Greco (el.json)
+🇭🇺 Ungherese (hu.json)
+🇫🇮 Finlandese (fi.json)
+🇹🇷 Turco (tr.json)
+🇦🇱 Albanese (sq.json)
+🇷🇸 Serbo (sr.json)
+🇰🇷 Coreano (ko.json)
+```
